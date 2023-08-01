@@ -154,17 +154,14 @@
 @keyframes load-portrait {
     0% {
         opacity: 0;
-        transform: translateY(70px);
-        /* rotate: -15deg; */
+        transform: translateY(50px);
     }
 
     35% {
-        transform: translateY(-20px);
         opacity: 100%;
     }
-
-    60% {
-        transform: translateY(20px);
+    50% {
+        transform: translateY(-50px);
     }
 
     100% {
