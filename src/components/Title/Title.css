@@ -288,11 +288,12 @@
     }
 
     .header-container {
-        margin-bottom: 5vh;
+        height: 50%;
     }
 
     #img-portrait {
-        height: 200px;
+        height: 150px;
+        z-index: 2;
     }
 
     .slider {
