@@ -15,15 +15,15 @@ const Title = () => {
                 </div>
                 <div id="img-container">
                     <div id="img-portrait" className="image">
-                        <img id="portrait" src="./src/assets/portrait.jpg"
+                        <img id="portrait" src="/portrait.jpg"
                             alt="Portrait of me at Crescent Bay Park Point (Laguna Beach)!" />
                     </div>
                     <div id="logos-container">
                         <a href="https://www.linkedin.com/in/jonathan-tran-b405301ba/" target="_blank">
-                            <img id="linkedin-logo" src="src/assets/links/linkedin.svg" />
+                            <img id="linkedin-logo" src="/links/linkedin.svg" />
                         </a>
                         <a href="https://github.com/tranjm4" target="_blank">
-                            <img id="github-logo" src="src/assets/links/github.svg" />
+                            <img id="github-logo" src="/links/github.svg" />
                         </a>
                     </div>
                 </div>

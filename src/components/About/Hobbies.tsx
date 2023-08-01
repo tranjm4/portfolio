@@ -28,7 +28,7 @@ const Hobbies = () => {
                 <div className="photo-container">
                     <Reveal fromLeft={true} >
                         <div className="photo">
-                            <img src="src/assets/photography/beach_rock.jpg"></img>
+                            <img src="/photography/beach_rock.jpg"></img>
                         </div>
                     </Reveal>
                 </div>
