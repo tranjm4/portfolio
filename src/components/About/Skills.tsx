@@ -16,10 +16,10 @@ class Card {
 
 const Skills = () => {
     const cards = [
-        new Card(-25, 8, "/cpp_logo.svg"),
-        new Card(-15, 7, "/react_logo.svg"),
-        new Card(0, 10, "/python_logo.svg"),
-        new Card(15, 9, "/firebase_logo.svg"),
+        new Card(-25, 8, "/logos/cpp_logo.svg"),
+        new Card(-15, 7, "/logos/react_logo.svg"),
+        new Card(0, 10, "/logos/python_logo.svg"),
+        new Card(15, 9, "/logos/firebase_logo.svg"),
     ]
 
     return (
