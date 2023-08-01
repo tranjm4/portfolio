@@ -1,5 +1,3 @@
-import React from 'react';
-
 import "./Intro.css";
 
 import Reveal from '../ScrollEffect/Reveal';

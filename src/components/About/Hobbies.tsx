@@ -1,21 +1,8 @@
-import React, { useState } from 'react';
-
 import "./Hobbies.css";
 
 import Reveal from '../ScrollEffect/Reveal';
 
 const Hobbies = () => {
-    const photos = [
-        // "src/assets/photography/alley.jpg",
-        "src/assets/photography/beach_rock.jpg",
-        // "src/assets/photography/library.jpg",
-        // "src/assets/photography/paraglider.jpg",
-        // "src/assets/photography/park.jpg",
-        // "src/assets/photography/sunrise.jpg",
-        // "src/assets/photography/vinyls.jpg"
-    ];
-
-    const [photoState, setPhotoState] = useState(0)
 
     return (
         <>
