@@ -161,7 +161,7 @@
         opacity: 100%;
     }
     50% {
-        transform: translateY(-50px);
+        transform: translateY(-20px);
     }
 
     100% {
