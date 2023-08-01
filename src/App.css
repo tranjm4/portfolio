@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap');
+
+:root {
+  --color-primary: #00C49A;
+  --color-secondary: #2D5DBD;
+  --color-secondary-dark: #493f4f;
+  --color-tertiary: #D81E5B;
+  --color-tertiary-dark: #91123c;
+  --color-quartiary: #FFFD98;
+  --color-dark: #2a2a2a;
+  --color-dark-faint: #363535;
+  --color-light: #e0daba;
+  --font-family: 'Outfit', sans-serif;
+  --transition: 0.3s;
+
+  --fade-in: fade-in;
+
+  --gradient-horizontal: linear-gradient(90deg, var(--color-primary), 30%, var(--color-secondary));
+  --gradient-vertical: linear-gradient(180deg, var(--color-primary), 60%, var(--color-secondary));
+  --shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px,
+    rgba(0, 0, 0, 0.1) 0px -12px 30px,
+    rgba(0, 0, 0, 0.1) 0px 4px 6px,
+    rgba(0, 0, 0, 0.1) 0px 12px 13px,
+    rgba(0, 0, 0, 0.1) 0px -3px 5px;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-10px);
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+html,
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  margin: 0 0 0 0;
+  font-family: var(--font-family);
+  line-height: 1.2;
+  height: fit-content;
+  width: fit-content;
+}
+
+a {
+  color: var(--color-quintiary);
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+}
+
+a:hover {
+  background-color: #e0dabaf8;
+  color: black;
+  border-radius: 10px;
+  transition: 0.25s;
+  -webkit-transition: 0.25s;
+}
+
+.App {
+  background-color: var(--color-dark);
+  min-width: 350px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.image {
+  box-shadow: var(--shadow);
+}
+
+::selection {
+  color: black;
+  background-color: var(--color-primary);
+}
