@@ -17,7 +17,7 @@
 
     border-radius: 10%;
 
-    transition: 0.5s ease;
+    transition: 0.75s ease;
     pointer-events: none;
 }
 
@@ -40,12 +40,12 @@
     width: 100%;
     margin-top: 0;
     opacity: 0%;
-    animation: flip-card-reverse 0.5s ease;
+    animation: flip-card-reverse 0.75s ease;
 }
 
 .card-container:hover #logo-3, .card-container:active #logo-3 {
     opacity: 100%;
-    animation: flip-card 0.5s ease;
+    animation: flip-card 0.75s ease;
 }
 
 @keyframes flip-card {
@@ -65,10 +65,10 @@
     0% {
         opacity: 100%;
     }
-    31% {
+    30% {
         opacity: 100%;
     }
-    32% {
+    31% {
         opacity: 0%;
     }
 }
