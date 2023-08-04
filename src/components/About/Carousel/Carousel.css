@@ -285,6 +285,11 @@
     #hobbies-entry {
         padding-top: 20vh;
     }
+
+    .carousel {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 /* Tablet Landscape Query */

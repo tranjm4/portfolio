@@ -177,7 +177,7 @@
         flex-direction: row-reverse;
     }
 
-    .About-entry-1 h1, .About-entry h1 {
+    .About-entry-1 h1, .About-entry-2 h1 {
         font-size: 60px;
     }
     .About-entry-1 h2, .About-entry-2 h2 {
@@ -203,7 +203,7 @@
         font-size: 68px;
     }
 
-    .About-entry-1 h2, .About-entry h2 {
+    .About-entry-1 h2, .About-entry-2 h2 {
         font-size: 25px;
         font-weight: 300;
     }
@@ -267,6 +267,13 @@
         margin-top: 30vh;
     }
 
+    .About-entry-1 h1, .About-entry-2 h1 {
+        font-size: 40px;
+    }
+    .About-entry-1 h2, .About-entry-2 h2 {
+        font-size: 20px;
+    }
+
     .About-entry-1 {
         flex-direction: row;
     }
@@ -283,6 +290,7 @@
     .About-entry-1 .header, .About-entry-2 .header {
         margin: 3%;
         padding: 3%;
+        width: 45%;
     }
 }
 
