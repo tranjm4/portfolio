@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import "./Carousel.css";
-import Reveal from '../../ScrollEffect/Reveal';
 
-interface Props {
-  children: React.ReactNode;
-}
 
-const Carousel: React.FC<Props> = ({ children }: Props) => {
+const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const photos: string[] = [
