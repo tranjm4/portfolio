@@ -23,7 +23,7 @@ const Appear: React.FC<Props> = ({ children, fromLeft }: Props) => {
     <div className="Appear" ref={ref} style={{ position: "relative", overflow: "hidden" }}>
       <motion.div
         variants={{
-          hidden: {opacity: 0.3, translateX: directionX},
+          hidden: {opacity: 0.1, translateX: directionX},
           visible: { opacity: 1, translateX: "0"}
         }}
         initial="hidden"

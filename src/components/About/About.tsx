@@ -28,7 +28,7 @@ const About: React.FC = () => {
                 </Appear>
 
                 <Appear fromLeft={true}>
-                    <div className="About-entry-1">
+                    <div className="About-entry-1" id="hobbies-entry">
                         <Hobbies />
                     </div>
                     <Ribbon fromLeft={true} />

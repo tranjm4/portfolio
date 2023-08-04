@@ -1,9 +1,9 @@
 import "./Hobbies.css";
 
 import Reveal from '../ScrollEffect/Reveal';
+import Carousel from "./Carousel/Carousel";
 
 const Hobbies = () => {
-
     return (
         <>
             <div className="header">
@@ -22,16 +22,15 @@ const Hobbies = () => {
                         driving to scenic spots to take photos,
                         or sipping on a nice cup of coffee.
                     </h2>
+                    <h2>
+                        Here are some personal favorite photos I've taken :)
+                    </h2>
                 </Reveal>
             </div>
             <div className="graphic-container">
-                <div className="photo-container">
-                    <Reveal fromLeft={true} >
-                        <div className="photo">
-                            <img src="/photography/beach_rock.jpg"></img>
-                        </div>
-                    </Reveal>
-                </div>
+                <Carousel>
+                    <p>Test</p>
+                </Carousel>
             </div>
         </>
     )

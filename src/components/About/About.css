@@ -200,7 +200,7 @@
     }
 
     .About-entry-1 h1, .About-entry-2 h1 {
-        font-size: 80px;
+        font-size: 68px;
     }
 
     .About-entry-1 h2, .About-entry h2 {
@@ -251,7 +251,7 @@
         width: 50%;
         padding-left: 2%;
         padding-right: 2%;
-        max-width: 750px;
+        max-width: 900px;
     }
     
     .graphic {
