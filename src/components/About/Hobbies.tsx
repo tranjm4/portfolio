@@ -28,9 +28,7 @@ const Hobbies = () => {
                 </Reveal>
             </div>
             <div className="graphic-container">
-                <Carousel>
-                    <p>Test</p>
-                </Carousel>
+                <Carousel />
             </div>
         </>
     )
