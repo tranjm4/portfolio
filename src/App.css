@@ -43,27 +43,13 @@
 
 html,
 body {
-  background-color: var(--color-dark);
+  background-color: #1e1b4b;
   color: var(--color-light);
   margin: 0 0 0 0;
   font-family: var(--font-family);
   line-height: 1.2;
   height: fit-content;
   width: fit-content;
-}
-
-a {
-  color: var(--color-quintiary);
-  transition: 0.25s;
-  -webkit-transition: 0.25s;
-}
-
-a:hover {
-  background-color: #e0dabaf8;
-  color: black;
-  border-radius: 10px;
-  transition: 0.25s;
-  -webkit-transition: 0.25s;
 }
 
 .App {
