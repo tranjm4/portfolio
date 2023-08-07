@@ -21,13 +21,21 @@ const ScrollSpin = ({ children, className }: Props) => {
         mass: 2
     });
 
+    const scrollScale = useTransform(scrollY, [0, 1000, 2000, 2100], [1, 1.75, 0, 0], { clamp: false });
+    const smoothScrollScale = useSpring(scrollScale, {
+        damping: 50,
+        stiffness: 200,
+        mass: 1
+    });
+
     return (
         <motion.div ref={ref} className={className} style={{
-            rotate: smoothVelocity
+            rotate: smoothVelocity,
+            scale: smoothScrollScale
         }}
             whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            initial={{ opacity: 0.2 }}
+            transition={{ duration: 0.75, delay: 0.25 }}
         >
             {children}
         </motion.div>
