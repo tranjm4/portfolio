@@ -51,13 +51,13 @@ const Skills: React.FC = () => {
             <div className="flex flex-col w-full h-full items-center p-10 md:p-16 xl:py-[40]">
                 <div className="flex flex-col md:flex-row items-center">
 
-                    <SlideAppear className="w-full md:w-[50%] xl:w-[80%] md:flex md:justify-center" offsetX="-20vw" offsetY="15vw">
+                    <SlideAppear className="w-full md:w-[50%] xl:w-[80%] md:flex md:justify-center" offsetX="0" offsetY="20vh" once={true}>
                         <h1 className="text-6xl font-bold mb-5 md:mb-0
                    lg:text-8xl">
                             Skills
                         </h1>
                     </SlideAppear>
-                    <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh">
+                    <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
                         <h2 className="text-lg text-light z-20
                                        lg:text-2xl xl:text-3xl">
                             The entirety of a toolbox is rarely needed for any single task,
@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
                         </h2>
                     </SlideAppear>
                 </div>
-                <SlideAppear className="flex flex-col justify-center items-center flex-grow w-full" offsetX="10vw" offsetY="5vh">
+                <SlideAppear className="flex flex-col justify-center items-center flex-grow w-full" offsetX="10vw" offsetY="5vh" once={true}>
                     <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[20%] lg:max-w-[calc(10vw+5vh)] 
                                            aspect-[3/4]"
                         whileHover="hover"
