@@ -2,7 +2,7 @@ import SlideAppear from "./Animations/SlideAppear";
 
 const Title = () => {
     return (
-        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center overflow-hidden">
+        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center overflow-hidden pb-[50vh]">
             {/* Title text */}
             <div className="flex flex-grow justify-center items-center md:flex-grow xl:flex-grow">
                 <div className="flex flex-col h-fit w-full p-10 xl:pl-[20%]"

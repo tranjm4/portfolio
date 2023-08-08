@@ -4,7 +4,7 @@ import circle from "../assets/circle.svg";
 
 const Intro: React.FC = () => {
     return (
-        <div className="min-h-screen h-fit w-screen md:flex-row md:justify-center overflow-hidden">
+        <div className="min-h-screen h-fit w-screen md:flex-row md:justify-center overflow-hidden pb-[50vh]">
             <div className="flex flex-col items-center p-10 md:p-16">
                 <div className="flex flex-col h-fit items-center md:flex-row">
 

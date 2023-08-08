@@ -21,7 +21,7 @@ const StickyEntry = ({ children }: Props) => {
         <>
             <div ref={ref} className="relative min-h-screen h-[max(175vh,750px)] w-screen pb-[20vh]">
                 <motion.div ref={ref} className="sticky top-0 left-0 right-0 h-5 bg-red origin-left rounded-md z-30"
-                    style={{ scaleX }}
+                    style={{ scaleX: scaleX }}
                 />
                 <div className="sticky top-0 left-0">
                     {children}
