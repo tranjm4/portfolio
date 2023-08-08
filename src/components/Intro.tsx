@@ -22,18 +22,18 @@ const Intro: React.FC = () => {
 
                             <br /> <br />
 
-                            I'm eager to learn new skills (web development is my most recent venture!).
+                            I love creating meaningful and beautiful applications.
 
                             <br /> <br />
 
                             This website has undergone several iterations as I've learned
-                            new frameworks - from vanilla HTML/CSS/JS, to React, to now
-                            Framer Motion and Tailwind CSS.
+                            and integrated new frameworks - from vanilla HTML/CSS/JS, to React, 
+                            to now Framer Motion and Tailwind CSS.
 
                             <br /> <br />
 
-                            I'm also eager to help others learn new skills! I've previously tutored students
-                            in math and programming in Python, and I currently tutor students in data structures in C++.
+                            I also strive to help others learn new skills! I've previously tutored
+                            in math and programming in Python, and I currently tutor in data structures in C++.
 
                             <br /> <br />
 
@@ -43,7 +43,7 @@ const Intro: React.FC = () => {
 
                 <div className="flex justify-center items-center">
                     <SlideAppear className="" offsetX="20vw" offsetY="5vh">
-                            <img src={circle} className="scale-[3] md:scale-[3] opacity-30 -z-20 translate-y-[100%] translate-x-[100%]"/>
+                        <img src={circle} className="scale-[3] md:scale-[3] opacity-30 -z-20 translate-y-[100%] translate-x-[100%]" />
                     </SlideAppear>
                     <SlideAppear className="" offsetX="-20vw" offsetY="-5vh">
                         <img src={circle} className="scale-[5] md:scale-[6] lg:scale-[7] opacity-[5%] -z-20 

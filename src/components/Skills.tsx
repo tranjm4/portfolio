@@ -35,14 +35,19 @@ const Skills: React.FC = () => {
 
     const [isHovered, setIsHovered] = useState(false);
     function handleMouseEnter() {
-        setIsHovered(true);
+        if (isHovered) {
+            setIsHovered(false);
+        }
+        else {
+            setIsHovered(true);
+        }
     }
     function handleMouseLeave() {
         setIsHovered(false);
     }
 
     return (
-        <div className="h-screen w-screen md:flex-row md:justify-center overflow-hidden">
+        <div className="h-[max(100vh,600px)] w-screen md:flex-row md:justify-center overflow-hidden">
             <div className="flex flex-col w-full h-full items-center p-10 md:p-16 xl:py-[40]">
                 <div className="flex flex-col md:flex-row items-center">
 
@@ -61,13 +66,9 @@ const Skills: React.FC = () => {
                     </SlideAppear>
                 </div>
                 <SlideAppear className="flex flex-col justify-center items-center flex-grow w-full" offsetX="10vw" offsetY="5vh">
-                    <motion.div className="group relative w-[calc(20vw+5vh)] 
-                                           md:w-[calc(10vw+10vh)] lg:w-[20%] lg:max-w-[calc(10vw+5vh)] 
+                    <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[20%] lg:max-w-[calc(10vw+5vh)] 
                                            aspect-[3/4]"
-                        variants={{
-                            noHover: {},
-                            hover: {}
-                        }}
+                        whileHover="hover"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={handleMouseEnter}
@@ -83,11 +84,17 @@ const Skills: React.FC = () => {
                                     noHover: { translateX: 0, translateY: 0, scale: 1, rotate: card.rotate },
                                     hover: { ...card.animation, scale: 1.1 }
                                 }}
+                                initial="noHover"
+                                whileHover="hover"
+                                onClick={handleMouseEnter}
                                 animate={isHovered ? "hover" : "noHover"}
                                 transition={{ type: "spring", damping: 50, stiffness: 200, mass: 2, restDelta: 0.001 }}
                             >
-                                <div className="relative flex items-center justify-center h-full w-full">
-                                    <img src={card.svg} className=" justify-center w-[100%] min-w-[100px] max-w-[100px] md:max-w-[125px]" />
+                                <div className="relative flex flex-col items-center justify-center h-full w-full">
+                                    <img src={card.svg} className=" justify-center w-[60%]" />
+                                    <h1 className="font-extrabold text-xl xl:text-3xl">
+                                        {card.name}
+                                    </h1>
                                 </div>
                             </motion.div>
                         ))}

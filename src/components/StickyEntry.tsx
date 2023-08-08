@@ -9,7 +9,7 @@ const StickyEntry = ({ children }: Props) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["center center", "end end"]
+        offset: ["start center", "end end"]
     })
     const scaleX = useSpring(scrollYProgress, {
         damping: 50,
@@ -19,7 +19,7 @@ const StickyEntry = ({ children }: Props) => {
     });
     return (
         <>
-            <div ref={ref} className="relative min-h-screen h-[150vh] w-screen mb-[20vh]">
+            <div ref={ref} className="relative min-h-screen h-[max(175vh,750px)] w-screen pb-[20vh]">
                 <motion.div ref={ref} className="sticky top-0 left-0 right-0 h-5 bg-red origin-left rounded-md z-30"
                     style={{ scaleX }}
                 />
