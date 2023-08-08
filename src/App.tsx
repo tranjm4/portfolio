@@ -5,7 +5,7 @@ import Title from './components/Title';
 import Open from './components/Open';
 import Intro from './components/Intro';
 import Skills from './components/Skills';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import circle from "./assets/circle.svg";
 import { motion, useAnimation, useInView } from 'framer-motion';
 
