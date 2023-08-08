@@ -1,6 +1,6 @@
 import React from 'react';
-import SlideAppear from '../Animations/SlideAppear'
-import circle from "../../assets/circle.svg";
+import SlideAppear from './Animations/SlideAppear'
+import circle from "../assets/circle.svg";
 
 const Intro: React.FC = () => {
     return (

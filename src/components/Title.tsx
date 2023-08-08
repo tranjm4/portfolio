@@ -5,34 +5,34 @@ const Title = () => {
         <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center overflow-hidden">
             {/* Title text */}
             <div className="flex flex-grow justify-center items-center md:flex-grow xl:flex-grow">
-                <div className="flex flex-col h-fit w-full p-10 xl:pl-[20%]
-                                bg-gradient-to-b from-teal to-purple-400 via-purple-400 via-80% bg-clip-text text-transparent"
+                <div className="flex flex-col h-fit w-full p-10 xl:pl-[20%]"
                 >
-                    <SlideAppear className="flex flex-col items-center" offsetX="-20vw" offsetY="-10vh">
+                    <SlideAppear className="flex flex-col items-center bg-clip-text text-transparent
+                    bg-gradient-to-b from-teal to-purple-400" offsetX="-20vw" offsetY="-10vh">
                         <div>
-                            <h1 className="text-6xl font-bold mb-2
+                            <h1 className="text-6xl font-extrabold mb-2
                                    md:text-7xl md:mb-6
                                    lg:text-8xl">
                                 I'm <br /> Jonathan Tran
                             </h1>
 
-                            <h2 className="text-3xl font-bold mb-2
-                                   md:text-4xl md:mb-4
-                                   lg:text-5xl lg:mb-6">
-                                University of California, Irvine
+                            <h2 className="text-4xl font-extrabold mb-2
+                                   md:text-5xl md:mb-4
+                                   lg:text-6xl lg:mb-6">
+                                Software Engineer
                             </h2>
 
                             <h3 className="text-xl font-bold mb-2
                                    md:text-3xl md:mb-4
                                    lg:text-4xl lg:mb-6">
-                                Computer Science, B.S. <br />
-                                Statistics, Minor
+                                University of California, Irvine
                             </h3>
 
                             <h3 className="text-xl font-bold
                                    md:text-3xl
                                    lg:text-4xl">
-                                Sept 2021 - Dec 2024
+                                Computer Science, B.S. <br />
+                                Statistics, Minor
                             </h3>
                         </div>
                     </SlideAppear>

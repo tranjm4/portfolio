@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
 
     return (
         <div className="h-screen w-screen md:flex-row md:justify-center overflow-hidden">
-            <div className="flex flex-col w-full h-full items-center p-10 md:p-16">
+            <div className="flex flex-col w-full h-full items-center p-10 md:p-16 xl:py-[40]">
                 <div className="flex flex-col md:flex-row items-center">
 
                     <SlideAppear className="w-full md:w-[50%] xl:w-[80%] md:flex md:justify-center" offsetX="-20vw" offsetY="15vw">
