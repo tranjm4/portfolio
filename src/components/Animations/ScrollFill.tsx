@@ -12,7 +12,7 @@ const ScrollFill = ({ className }: Props) => {
         offset: ["end end", "start start"]
     });
 
-    const scaleY = useTransform(scrollY, [0, 500, 2000], ["0", "-120%", "-120%"], { clamp: false });
+    const scaleY = useTransform(scrollY, [-1, 0, 500, 2000], ["0", "0", "-120%", "-120%"], { clamp: false });
 
     return (
         <motion.div ref={ref}
