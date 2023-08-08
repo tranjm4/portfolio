@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { motion, useScroll, useTransform, useVelocity, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 interface Props {
     children: React.ReactNode;
@@ -13,15 +13,12 @@ const ScrollSpin = ({ children, className }: Props) => {
         offset: ["start end", "end end"]
     });
 
-    const scrollVelocity = useVelocity(scrollY);
-    const velocityFactor = useTransform(scrollVelocity, [0, 100], [0, 20], { clamp: false });
-    const smoothVelocity = useSpring(velocityFactor, {
-        damping: 50,
-        stiffness: 100,
-        mass: 2
+    const springY = useSpring(scrollY, {
+        damping: 100, stiffness: 250, mass: 2
     });
+    const smoothScrollY = useTransform(springY, [0, 100], [0, 70], { clamp: false });
 
-    const scrollScale = useTransform(scrollY, [0, 1000, 2000, 2100], [1, 1.75, 0, 0], { clamp: false });
+    const scrollScale = useTransform(scrollY, [0, 500, 1000, 2100], [1, 1.75, 0, 0], { clamp: false });
     const smoothScrollScale = useSpring(scrollScale, {
         damping: 50,
         stiffness: 200,
@@ -30,7 +27,7 @@ const ScrollSpin = ({ children, className }: Props) => {
 
     return (
         <motion.div ref={ref} className={className} style={{
-            rotate: smoothVelocity,
+            rotate: smoothScrollY,
             scale: smoothScrollScale
         }}
             whileInView={{ opacity: 1 }}

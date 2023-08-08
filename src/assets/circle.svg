@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 width="165px" height="165px" viewBox="0 0 165 165">
+  <g transform="translate(82.453 82.563)">
+    <g id="t32">
+      <g id="t16">
+        <g id="t8">
+          <g id="t4">
+            <g id="t3">
+              <rect fill="#fcd34d" x="70.5" y="-0.5024" width="9" height="2.0" id="t"/>
+              <use xlink:href="#t" transform="rotate(5.37)"/>
+              <use xlink:href="#t" transform="rotate(10.75)"/>
+            </g>
+            <use xlink:href="#t" transform="rotate(16.12)"/>
+          </g>
+          <use xlink:href="#t4" transform="rotate(21.49)"/>
+        </g>
+        <use xlink:href="#t8" transform="rotate(42.99)"/>
+      </g>
+      <use xlink:href="#t16" transform="rotate(85.97)"/>
+    </g>
+    <use xlink:href="#t32" transform="rotate(171.94)"/>
+    <use xlink:href="#t3" transform="rotate(343.88)"/>
+  </g>
+</svg>
