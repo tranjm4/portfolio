@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
 interface Props {
     children: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props {
     offsetY: string;
 }
 
-const SlideAppear = ({ children, className, offsetX, offsetY }: Props) => {
+const SlideAppear: React.FC<Props> = ({ children, className, offsetX, offsetY }: Props) => {
     return (
         <motion.div className={className}
         whileInView={{ opacity: 1, translateX: 0, translateY: 0 }}

@@ -11,13 +11,14 @@ export default {
                 rgba(0, 0, 0, 0.1) 0px -12px 30px, \
                 rgba(0, 0, 0, 0.1) 0px 4px 6px, \
                 rgba(0, 0, 0, 0.1) 0px 12px 13px, \
-                rgba(0, 0, 0, 0.1) 0px -3px 5px"
+                rgba(0, 0, 0, 0.1) 0px -3px 5px",
+        "even": "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"
       }
     },
     colors: {
       "transparent": "transparent",
       "teal": "#2dd4bf",
-      "blue": "2d9bbf",
+      "blue": "#2d9bbf",
       "purple": {
         400: "#6366f1",
         800: "#4c1d95"
@@ -31,7 +32,10 @@ export default {
         700: "#334155",
         800: "#1e293b"
       },
-      "light": "#e5e7eb"
+      "red": "#FC6471",
+      "lavender": "#CAA8F5",
+      "light": "#e5e7eb",
+      "pink": "#E5A9A9"
     }
   },
   plugins: [],
