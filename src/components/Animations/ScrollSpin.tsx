@@ -28,7 +28,7 @@ const ScrollSpin = ({ children, className }: Props) => {
     return (
         <motion.div ref={ref} className={className} style={{
             rotate: smoothScrollY,
-            scale: smoothScrollScale
+            scale: smoothScrollScale,
         }}
             whileInView={{ opacity: 1 }}
             initial={{ opacity: 0.2 }}

@@ -24,7 +24,6 @@ function App() {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    console.log(openInView, titleInView, introInView, skillsInView);
     if (openInView && !titleInView && !introInView && !skillsInView) {
       mainControls.start("open");
     }
@@ -48,7 +47,7 @@ function App() {
 
   return (
     <>
-      <div className=" bg-dark-700 h-fit w-screen selection:bg-teal selection:text-dark-800 scroll-smooth flex flex-col no-scrollbar">
+      <div className="bg-dark-700 h-fit w-screen selection:bg-teal selection:text-dark-800 scroll-smooth flex flex-col no-scrollbar">
         <div ref={openRef}>
           <Open />
         </div>
