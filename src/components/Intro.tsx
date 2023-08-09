@@ -1,5 +1,7 @@
 import React from 'react';
 import SlideAppear from './Animations/SlideAppear'
+import TextBox from './Supplemental/TextBox';
+import Reveal from './Animations/Reveal';
 
 const Intro: React.FC = () => {
     return (
@@ -14,30 +16,36 @@ const Intro: React.FC = () => {
                         </h1>
                     </SlideAppear>
 
-                    <div className="md:ml-[10%] bg-dark-800 bg-opacity-70 p-3 md:p-6 lg:p-10 rounded-2xl">
+                    <TextBox className="md:ml-[10%] p-3 md:p-6 lg:p-10">
 
-                        <SlideAppear className="md:w-full" offsetX="-20vw" offsetY="20vh" once={true}>
+                        <div className="bg-gradient-to-tl from-dark-800 to-transparent via-transparent via-50% bg-opacity-70 rounded-xl p-3">
 
-                            <h2 className="text-lg text-light z-20
+                            <SlideAppear className="md:w-full" offsetX="-20vw" offsetY="20vh" once={true}>
+
+                                <Reveal className="">
+                                    <h2 className="text-lg text-light z-20
                                        lg:text-2xl xl:text-3xl">
-                                I'm a third-year undergraduate studying computer science and
-                                statistics at UC Irvine.
 
-                                <br /> <br />
+                                        I'm a third-year undergraduate studying computer science and
+                                        statistics at UC Irvine.
 
-                                I love creating meaningful and beautiful applications.
+                                        <br /> <br />
 
-                                <br /> <br />
+                                        I love creating meaningful and beautiful applications.
 
-                                I also strive to help others learn new skills! I've previously tutored
-                                in math and programming in Python, and I currently tutor in data structures in C++.
+                                        <br /> <br />
 
-                            </h2>
-                        </SlideAppear>
-                    </div>
+                                        I also strive to help others learn new skills! I've previously tutored
+                                        in math and programming in Python, and I currently tutor in data structures in C++.
+
+                                    </h2>
+                                </Reveal>
+                            </SlideAppear>
+                        </div>
+                    </TextBox>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

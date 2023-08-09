@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import SlideAppear from './Animations/SlideAppear';
+import TextBox from './Supplemental/TextBox';
+import Reveal from './Animations/Reveal';
 import { motion } from "framer-motion";
 
 import cpp_logo from "../assets/logos/cpp_logo.svg";
@@ -57,16 +59,20 @@ const Skills: React.FC = () => {
                             Skills
                         </h1>
                     </SlideAppear>
-                    <div className="md:ml-[10%] bg-dark-800 bg-opacity-70 p-3 md:p-6 lg:p-10 rounded-2xl">
 
-                        <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
-                            <h2 className="text-lg text-light z-20
+                    <TextBox className="md:ml-[10%] p-3 md:p-6 lg:p-10">
+                        <div className="bg-gradient-to-tl from-dark-800 to-transparent via-transparent w-fit via-50% bg-opacity-70 p-3 md:p-8 rounded-xl">
+                            <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
+                                <Reveal className="">
+                                    <h2 className="text-lg text-light z-20
                                        lg:text-2xl xl:text-3xl">
-                                The entirety of a toolbox is rarely needed for any single task,
-                                but it is certainly important to be prepared for any task.
-                            </h2>
-                        </SlideAppear>
-                    </div>
+                                        The entirety of a toolbox is rarely needed for any single task,
+                                        but it is certainly important to be prepared for any task.
+                                    </h2>
+                                </Reveal>
+                            </SlideAppear>
+                        </div>
+                    </TextBox>
                 </div>
                 <SlideAppear className="flex flex-col mt-[18vh] items-center flex-grow w-full" offsetX="-10vw" offsetY="5vh" once={true}>
                     <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[calc(min(10vw+5vh,10vh+5vw))] 
