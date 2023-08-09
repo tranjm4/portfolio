@@ -18,7 +18,7 @@ const SlideAppear: React.FC<Props> = ({ children, className, offsetX, offsetY, o
         delay: 0.25
     };
     const initial = {
-        opacity: 0.2,
+        opacity: 0.05,
         translateX: offsetX,
         translateY: offsetY
     };

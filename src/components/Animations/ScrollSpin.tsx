@@ -14,9 +14,9 @@ const ScrollSpin = ({ children, className }: Props) => {
     });
 
     const springY = useSpring(scrollY, {
-        damping: 100, stiffness: 250, mass: 2
+        damping: 200, stiffness: 250, mass: 2
     });
-    const smoothScrollY = useTransform(springY, [0, 100], [0, 70], { clamp: false });
+    const smoothScrollY = useTransform(springY, [0, 1500, 1600], [0, 1200, 1200], { clamp: false });
 
     const scrollScale = useTransform(scrollY, [0, 500, 1000, 2100], [0.5, 1.75, 0, 0], { clamp: false });
     const smoothScrollScale = useSpring(scrollScale, {

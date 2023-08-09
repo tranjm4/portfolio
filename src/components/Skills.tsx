@@ -47,26 +47,29 @@ const Skills: React.FC = () => {
     }
 
     return (
-        <div className="h-[max(100vh,600px)] w-screen md:flex-row md:justify-center overflow-hidden">
-            <div className="flex flex-col w-full h-full items-center p-10 md:p-16 xl:py-[40]">
-                <div className="flex flex-col md:flex-row items-center">
+        <div className="h-[max(120vh,600px)] min-h-fit w-screen md:flex-row md:justify-center overflow-hidden mb-[10vh]">
+            <div className="flex flex-col w-full h-full items-center p-10 md:p-20 lg:px-[15vw]">
+                <div className="flex flex-col w-full h-fit md:flex-row items-center">
 
-                    <SlideAppear className="w-full md:w-[50%] xl:w-[80%] md:flex md:justify-center" offsetX="0" offsetY="20vh" once={true}>
+                    <SlideAppear className="w-full md:w-[50%] md:flex md:justify-center" offsetX="-10vw" offsetY="20vh" once={true}>
                         <h1 className="text-6xl font-bold mb-5 md:mb-0
                    lg:text-8xl">
                             Skills
                         </h1>
                     </SlideAppear>
-                    <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
-                        <h2 className="text-lg text-light z-20
+                    <div className="md:ml-[10%] bg-dark-800 bg-opacity-70 p-3 md:p-6 lg:p-10 rounded-2xl">
+
+                        <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
+                            <h2 className="text-lg text-light z-20
                                        lg:text-2xl xl:text-3xl">
-                            The entirety of a toolbox is rarely needed for any single task,
-                            but it is certainly important to be prepared for any task.
-                        </h2>
-                    </SlideAppear>
+                                The entirety of a toolbox is rarely needed for any single task,
+                                but it is certainly important to be prepared for any task.
+                            </h2>
+                        </SlideAppear>
+                    </div>
                 </div>
-                <SlideAppear className="flex flex-col justify-center items-center flex-grow w-full" offsetX="10vw" offsetY="5vh" once={true}>
-                    <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[20%] lg:max-w-[calc(10vw+5vh)] 
+                <SlideAppear className="flex flex-col mt-[18vh] items-center flex-grow w-full" offsetX="-10vw" offsetY="5vh" once={true}>
+                    <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[calc(min(10vw+5vh,10vh+5vw))] 
                                            aspect-[3/4]"
                         whileHover="hover"
                         onMouseEnter={handleMouseEnter}

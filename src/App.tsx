@@ -7,7 +7,7 @@ import Intro from './components/Intro';
 import Skills from './components/Skills';
 import { useEffect, useRef } from 'react';
 import circle from "./assets/circle.svg";
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { motion, useAnimation, useInView, useSpring, useScroll } from 'framer-motion';
 
 
 function App() {
@@ -56,30 +56,29 @@ function App() {
         <motion.div className="fixed top-1/2 left-1/2"
           variants={{
             open: { opacity: 0, translateX: "-10vw", translateY: "20vh" },
-            title: { opacity: 1, translateX: "5vw", translateY: 0, scale: 1},
-            intro: { opacity: 1, translateX: "-10vw", translateY: "-10vh", scale: 1.2},
-            skills: { opacity: 1, translateX: "15vw", translateY: 0, scale: 1.5}
+            title: { opacity: 1, translateX: "5vw", translateY: 0, scale: 1 },
+            intro: { opacity: 1, translateX: "-10vw", translateY: "-10vh", scale: 1.2 },
+            skills: { opacity: 1, translateX: "15vw", translateY: 0, scale: 1.5 }
           }}
           initial="open"
           animate={mainControls}
           transition={transition}
         >
-          <img src={circle} className="scale-[3] md:scale-[3] opacity-30 -z-20" />
+          <img src={circle} className="scale-[3] md:scale-[3] opacity-[20%] -z-20" />
         </motion.div>
         <motion.div className="fixed top-1/2 left-1/2"
           variants={{
             open: { opacity: 0, translateX: "-5vw", translateY: "-5vh" },
             title: { opacity: 1, translateX: "2vw", translateY: 0, scale: 1 },
             intro: { opacity: 1, translateX: "8vw", translateY: "4vh", scale: 1.2 },
-            skills: { opacity: 1, translateX: "-5vw", translateY: 0, scale: 0.8}
+            skills: { opacity: 1, translateX: "-5vw", translateY: 0, scale: 0.8 }
           }}
           initial="open"
           animate={mainControls}
           transition={transition}
-          >
+        >
           <img src={circle} className="scale-[5] md:scale-[6] lg:scale-[7] opacity-[5%] -z-20" />
         </motion.div>
-
 
         <div ref={titleRef} className="mt-[30vh]" />
         <Title />
@@ -89,6 +88,7 @@ function App() {
 
         <div ref={skillsRef} />
         <Skills />
+
       </div>
     </>
   )

@@ -2,7 +2,7 @@ import SlideAppear from "./Animations/SlideAppear";
 
 const Title = () => {
     return (
-        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center mb-[50vh] overflow-hidden">
+        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center mb-[30vh] overflow-hidden">
             {/* Title text */}
             <div className="flex flex-grow justify-center items-center md:flex-grow xl:flex-grow">
                 <div className="flex flex-col h-fit w-full p-10 xl:pl-[20%]"
@@ -10,13 +10,13 @@ const Title = () => {
                     <SlideAppear className="flex flex-col items-center bg-clip-text text-transparent
                     bg-gradient-to-b from-teal to-purple-400" offsetX="-20vw" offsetY="-10vh" once={false}>
                         <div>
-                            <h1 className="text-6xl font-extrabold mb-2
+                            <h1 className="text-5xl font-extrabold mb-2
                                    md:text-7xl md:mb-6
                                    lg:text-8xl">
                                 I'm <br /> Jonathan Tran
                             </h1>
 
-                            <h2 className="text-4xl font-extrabold mb-2
+                            <h2 className="text-3xl font-extrabold mb-2
                                    md:text-5xl md:mb-4
                                    lg:text-6xl lg:mb-6">
                                 Software Engineer
