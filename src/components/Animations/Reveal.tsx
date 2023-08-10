@@ -18,7 +18,7 @@ const Reveal: React.FC<Props> = ({ children, className }: Props) => {
     }, [isInView]);
 
     return (
-        <div ref={ref} className="relative overflow-hidden">
+        <div ref={ref} className="relative overflow-hidden h-full w-full">
             {children}
             <motion.div className={className}
                 style={{
@@ -36,8 +36,9 @@ const Reveal: React.FC<Props> = ({ children, className }: Props) => {
                 initial="hidden"
                 animate={mainControls}
                 transition={{
-                    duration: 1,
-                    delay: 1.25
+                    duration: 0.75,
+                    delay: 1.25,
+                    ease: "easeOut"
                 }}
             >
             </motion.div>

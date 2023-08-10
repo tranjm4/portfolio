@@ -10,43 +10,40 @@ const Title = () => {
             <div className="flex flex-grow justify-center items-center md:flex-grow xl:flex-grow-0 mx-0 md:mx-0 lg:ml-10 lg:mr-0">
                 <div className="flex flex-col items-center h-fit w-full p-10 xl:p-0"
                 >
-                    <TextBox className="w-fit">
+                    <TextBox className="w-fit h-full">
 
-                        <SlideAppear className="flex flex-col bg-clip-text text-transparent
-                            bg-gradient-to-b from-teal to-purple-400" offsetX="-20vw" offsetY="-10vh" once={false}>
-                            <Reveal className="">
+                        <SlideAppear className="flex flex-col w-full h-full" offsetX="-20vw" offsetY="-10vh" once={false}>
 
-                                <h1 className="text-5xl font-extrabold mb-2
+                            <Reveal className="h-full w-full">
+                                <div className="bg-gradient-to-b from-teal to-purple-400 bg-clip-text text-transparent">
+
+                                    <h1 className="text-5xl font-extrabold mb-2
                                    md:text-7xl md:mb-6
                                    lg:text-8xl">
 
-                                    I'm <br /> Jonathan Tran
-                                </h1>
-                            </Reveal>
+                                        I'm <br /> Jonathan Tran
+                                    </h1>
 
-                            <Reveal className="">
-                                <h2 className="text-3xl font-extrabold mb-2
+                                    <h2 className="text-3xl font-extrabold mb-2
                                    md:text-5xl md:mb-4
                                    lg:text-6xl lg:mb-6">
-                                    Software Engineer
-                                </h2>
-                            </Reveal>
-
-                            <Reveal className="">
-                                <h3 className="text-xl font-bold mb-2
+                                        Software Engineer
+                                    </h2>
+                                    <h3 className="text-xl font-bold mb-2
                                    md:text-3xl md:mb-4
                                    lg:text-4xl lg:mb-6">
-                                    University of California, Irvine <br />
-                                    <span className=" text-sm md:text-lg lg:text-2xl xl:text-3xl">
-                                        (Sept 2021 - Dec 2024)
-                                    </span>
-                                </h3>
-                                <h3 className="text-xl font-bold
+                                        University of California, Irvine <br />
+                                        <span className=" text-sm md:text-lg lg:text-2xl xl:text-3xl">
+                                            (Sept 2021 - Dec 2024)
+                                        </span>
+                                    </h3>
+                                    <h3 className="text-xl font-bold
                                    md:text-3xl
                                    lg:text-4xl">
-                                    Computer Science, B.S. <br />
-                                    Statistics, Minor
-                                </h3>
+                                        Computer Science, B.S. <br />
+                                        Statistics, Minor
+                                    </h3>
+                                </div>
                             </Reveal>
 
                         </SlideAppear>
