@@ -8,7 +8,7 @@ interface Props {
     offsetY: string;
 }
 
-const TextBoxReveal = ({ className, initialScale, offsetX, offsetY }: Props) => {
+const TextBoxReveal: React.FC<Props> = ({ className, initialScale, offsetX, offsetY }: Props) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     const mainControls = useAnimation();
