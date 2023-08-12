@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SlideAppear from './Animations/SlideAppear';
-import TextBox from './Supplemental/TextBox';
+import TextBoxReveal from './Animations/TextBoxReveal';
 import Reveal from './Animations/Reveal';
 import { motion } from "framer-motion";
 
@@ -49,30 +49,39 @@ const Skills: React.FC = () => {
     }
 
     return (
-        <div className="h-[max(120vh,600px)] min-h-fit w-screen md:flex-row md:justify-center overflow-hidden mb-[10vh]">
+        <div id="skills" className="h-[max(130vh,600px)] min-h-fit w-screen md:flex-row md:justify-center overflow-hidden mb-[10vh]">
             <div className="flex flex-col w-full h-full items-center p-10 md:p-20 lg:px-[15vw]">
-                <div className="flex flex-col w-full h-fit md:flex-row items-center">
+                <div className="relative flex flex-col w-full h-fit md:flex-row items-center">
 
-                    <SlideAppear className="w-full md:w-[50%] md:flex md:justify-center" offsetX="-10vw" offsetY="20vh" once={true}>
+                    <SlideAppear className="w-full md:w-[50%] md:flex md:justify-center z-10" offsetX="-10vw" offsetY="20vh" once={true}>
                         <h1 className="text-6xl font-bold mb-5 md:mb-0
                    lg:text-8xl">
                             Skills
                         </h1>
                     </SlideAppear>
+                    <div className="relative h-full w-fit p-5 lg:p-10">
 
-                    <TextBox className="md:ml-[10%] p-3 md:p-6 lg:p-10">
-                        <div className="bg-gradient-to-tl from-dark-800 to-transparent via-transparent w-fit via-50% bg-opacity-70 p-3 md:p-8 rounded-xl">
-                            <SlideAppear className="w-full md:w-full" offsetX="20vw" offsetY="10vh" once={true}>
-                                <Reveal className="">
-                                    <h2 className="text-lg text-light z-20
+                        {/* TextBoxes */}
+                        <TextBoxReveal className="absolute w-[100%] h-[100%] lg:w-full lg:h-full top-[0%] left-[-10%]
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="0.5" offsetX="-20vw" offsetY="10vh" />
+                        <TextBoxReveal className="absolute w-[80%] h-[80%] top-[30%] left-[0%]
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="0.5" offsetX="10vw" offsetY="-10vh" />
+                        <TextBoxReveal className="absolute w-[80%] h-[80%] top-[10%] left-[30%] lg:left-[25%]
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="2" offsetX="10vw" offsetY="-5vh" />
+
+                        <SlideAppear className="md:w-full" offsetX="-20vw" offsetY="20vh" once={true}>
+
+                            <Reveal className="">
+                                <h2 className="text-lg text-light z-20
                                        lg:text-2xl xl:text-3xl">
-                                        The entirety of a toolbox is rarely needed for any single task,
-                                        but it is certainly important to be prepared for any task.
-                                    </h2>
-                                </Reveal>
-                            </SlideAppear>
-                        </div>
-                    </TextBox>
+
+                                    The entirety of a toolbox is rarely needed at once, <br />
+                                    but it is important to be prepared for any task.
+
+                                </h2>
+                            </Reveal>
+                        </SlideAppear>
+                    </div>
                 </div>
                 <SlideAppear className="flex flex-col mt-[18vh] items-center flex-grow w-full" offsetX="-10vw" offsetY="5vh" once={true}>
                     <motion.div className="group relative w-[calc(min(15vw+5vh,15vh+5vw))] lg:w-[calc(min(10vw+5vh,10vh+5vw))] 

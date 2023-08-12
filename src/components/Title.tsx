@@ -1,18 +1,25 @@
 import SlideAppear from "./Animations/SlideAppear";
 import { motion } from "framer-motion";
-import TextBox from "./Supplemental/TextBox";
 import Reveal from "./Animations/Reveal";
+import TextBoxReveal from "./Animations/TextBoxReveal";
 
 const Title = () => {
     return (
-        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center mb-[30vh] overflow-hidden">
+        <div className="flex flex-col min-h-screen h-fit md:flex-row md:justify-center mb-[30vh] py-[10vh] overflow-hidden">
             {/* Title text */}
             <div className="flex flex-grow justify-center items-center md:flex-grow xl:flex-grow-0 mx-0 md:mx-0 lg:ml-10 lg:mr-0">
-                <div className="flex flex-col items-center h-fit w-full p-10 xl:p-0"
+                <div className="relative flex flex-col items-center h-fit w-fit p-10 xl:p-0"
                 >
-                    <TextBox className="w-fit h-full">
+                    <div className="w-full h-full">
 
-                        <SlideAppear className="flex flex-col w-full h-full" offsetX="-20vw" offsetY="-10vh" once={false}>
+                        <TextBoxReveal className="absolute w-full h-full top-[-5%] left-[0%] lg:top-[-10%] lg:left-[-5%] hover:scale-110
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="0.3" offsetX="-20vw" offsetY="20vh" />
+                        <TextBoxReveal className="absolute w-full h-full top-[0%] left-[5%] lg:top-[0%] lg:left-[5%] hover:scale-110
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="2" offsetX="30vw" offsetY="-30vh" />
+                        <TextBoxReveal className="absolute w-full h-full top-[5%] left-[10%] lg:top-[10%] lg:left-[15%] hover:scale-110
+                            bg-gradient-to-br from-dark-800 to-transparent via-transparent via-70%" initialScale="0.5" offsetX="50vw" offsetY="-20vh" />
+
+                        <SlideAppear className="flex flex-col w-full h-full lg:p-5 xl:p-16" offsetX="-20vw" offsetY="-10vh" once={false}>
 
                             <Reveal className="h-full w-full">
                                 <div className="bg-gradient-to-b from-teal to-purple-400 bg-clip-text text-transparent">
@@ -47,7 +54,7 @@ const Title = () => {
                             </Reveal>
 
                         </SlideAppear>
-                    </TextBox>
+                    </div>
                 </div>
 
             </div>
