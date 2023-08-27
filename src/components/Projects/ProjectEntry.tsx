@@ -59,7 +59,7 @@ const ProjectEntry: React.FC<Props> = ({ properties, direction, page, paginate }
                 animate="center"
                 exit="exit"
                 transition={{
-                    x: { type: "spring", damping: 25, stiffness: 300, restDelta: 0.001 },
+                    x: { type: "spring", damping: 30, stiffness: 300, restDelta: 0.001 },
                     opacity: { duration: 0.2 }
                 }}
                 drag="x"

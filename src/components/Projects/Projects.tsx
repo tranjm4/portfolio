@@ -47,11 +47,11 @@ const Projects: React.FC = () => {
 
     const handleLeftButtonClick = debounce(() => {
         paginate(-1);
-    }, 350);
+    }, 500);
 
     const handleRightButtonClick = debounce(() => {
         paginate(1);
-    }, 350);
+    }, 500);
 
     const title = "Projects";
     const description = "Here are some of my projects! Always a work-in-progress list :)";
