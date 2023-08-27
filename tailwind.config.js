@@ -27,6 +27,7 @@ export default {
     },
     colors: {
       "transparent": "transparent",
+      "background": "#000000",
       "teal": "#2dd4bf",
       "blue": "#2d9bbf",
       "purple": {
