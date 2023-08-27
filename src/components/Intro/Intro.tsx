@@ -1,7 +1,4 @@
 import React from 'react';
-import SlideAppear from '../Animations/SlideAppear'
-import Reveal from '../Animations/Reveal';
-import TextBoxReveal from '../Animations/TextBoxReveal';
 import Text from '../Supplemental/Text';
 
 const Intro: React.FC = () => {

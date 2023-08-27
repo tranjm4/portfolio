@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
                         {/* Dots */}
                         <div className="flex h-full w-fit items-center">
 
-                            {projects.map((project, index) => (
+                            {projects.map((_, index) => (
                                 (index === page) ?
                                     <div key={index} className="rounded-full border-2 md:border-4 mx-2 aspect-square w-4 md:w-6 border-light bg-teal
                                     duration-300" />

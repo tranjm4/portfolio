@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import SlideAppear from '../Animations/SlideAppear';
-import TextBoxReveal from '../Animations/TextBoxReveal';
-import Reveal from '../Animations/Reveal';
 import { motion } from "framer-motion";
 
 import cpp_logo from "../../assets/logos/cpp_logo.svg";

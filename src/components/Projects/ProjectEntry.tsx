@@ -66,6 +66,7 @@ const ProjectEntry: React.FC<Props> = ({ properties, direction, page, paginate }
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={1}
                 onDragEnd={(e, { offset, velocity }) => {
+                    e;
                     const swipe = swipePower(offset.x, velocity.x);
 
                     if (swipe < -swipeConfidenceThreshold) {
