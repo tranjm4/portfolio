@@ -2,7 +2,7 @@
 import './App.css'
 
 import Title from './components/Title/Title';
-import Open from './components/Open/Open';
+// import Open from './components/Open/Open';
 import Intro from './components/Intro/Intro';
 import Skills from './components/Skills/Skills';
 import { useEffect, useRef } from 'react';
@@ -12,13 +12,13 @@ import Projects from './components/Projects/Projects';
 
 
 function App() {
-  const openRef = useRef(null);
+  // const openRef = useRef(null);
   const titleRef = useRef(null);
   const introRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
 
-  const openInView = useInView(openRef, { once: false });
+  // const openInView = useInView(openRef, { once: false });
   const titleInView = useInView(titleRef, { once: false });
   const introInView = useInView(introRef, { once: false });
   const skillsInView = useInView(skillsRef, { once: false });
@@ -27,10 +27,7 @@ function App() {
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (openInView && !titleInView && !introInView && !skillsInView) {
-      mainControls.start("open");
-    }
-    else if (titleInView) {
+    if (titleInView) {
       mainControls.start("title");
     }
     else if (introInView) {
@@ -42,7 +39,7 @@ function App() {
     else if (projectsInView) {
       mainControls.start("projects");
     }
-  }, [openInView, titleInView, introInView, skillsInView, projectsInView])
+  }, [titleInView, introInView, skillsInView, projectsInView])
 
   const transition = {
     type: "spring",
@@ -54,9 +51,9 @@ function App() {
   return (
     <>
       <div className="bg-background h-fit w-screen selection:bg-teal selection:text-dark-800 scroll-smooth flex flex-col no-scrollbar">
-        <div ref={openRef}>
+        {/* <div ref={openRef}>
           <Open />
-        </div>
+        </div> */}
 
         <motion.div className="fixed top-1/2 left-1/2"
           variants={{
@@ -87,7 +84,7 @@ function App() {
           <img src={circle} className="scale-[5] md:scale-[6] lg:scale-[7] opacity-[20%] -z-20" />
         </motion.div>
 
-        <div ref={titleRef} className="mt-[30vh]" />
+        <div ref={titleRef} className="" />
         <Title />
 
         <div ref={introRef} />
