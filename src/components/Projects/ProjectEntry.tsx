@@ -78,7 +78,7 @@ const ProjectEntry: React.FC<Props> = ({ properties, direction, page, paginate }
             >
 
                 <div className="w-fit max-w-[300px] max-h-[300px] md:max-w-[500px] md:max-h-[500px] flex-grow-0 h-fit shadow-even md:shadow-3xl md:mr-10">
-                    <img src={properties.gif} className="rounded-xl" />
+                    <img src={properties.gif} className="" />
                 </div>
                 <div className="w-full md:w-full">
                     <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold my-3 text-center md:text-left">
