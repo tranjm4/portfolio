@@ -71,7 +71,7 @@ const Skills: React.FC = () => {
                     >
 
                         {cards.map((card, index) => (
-                            <motion.div key={`card${index}`} className={"absolute w-full h-full pointer-events-none shadow-even rounded-xl bg-darkblue-700"}
+                            <motion.div key={`card${index}`} className={"absolute w-full h-full pointer-events-none shadow-even rounded-xl bg-gradient-to-br from-lavender to-blue via-purple-800 via-50%"}
                                 style={{
                                     zIndex: card.zIndex,
                                     rotate: card.rotate
