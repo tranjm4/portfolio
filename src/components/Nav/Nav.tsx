@@ -31,7 +31,7 @@ interface MenuProps {
     isOpen: boolean
 }
 
-const DropDownMenu = ({ isOpen }: MenuProps) => {
+const DropDownMenu: React.FC<MenuProps> = ({ isOpen }: MenuProps) => {
     return (
         <div className="relative h-full w-full flex flex-col items-end">
             <AnimatePresence>
@@ -62,7 +62,7 @@ const DropDownMenu = ({ isOpen }: MenuProps) => {
     )
 }
 
-const Nav = () => {
+const Nav: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
     const mainControls = useAnimation();
     useEffect(() => {
