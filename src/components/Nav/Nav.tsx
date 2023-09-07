@@ -35,9 +35,9 @@ const DropDownMenu = ({ isOpen }: MenuProps) => {
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({ behavior: 'smooth' });
         }
-      };
+    };
     return (
         <div className="relative h-full w-full flex flex-col items-end">
             <AnimatePresence>
@@ -80,10 +80,28 @@ const Nav = () => {
         }
     }, [isOpen])
     return (
-        <div className="fixed h-16 w-screen z-50">
-            <DropdownButton isOpen={isOpen} setOpen={setOpen} />
-            <DropDownMenu isOpen={isOpen} />
-        </div>
+        <>
+            <div className="fixed h-16 w-screen z-50 lg:hidden">
+                <DropdownButton isOpen={isOpen} setOpen={setOpen} />
+                <DropDownMenu isOpen={isOpen} />
+            </div>
+
+            <div className="hidden lg:block lg:w-[20vw] lg:max-w-[400px] lg:min-w-[250] lg:flex-shrink-0 z-50">
+                <div className="fixed w-[20vw] h-screen lg:max-w-[400px] lg:min-w-[250px] top-0 left-0 bg-dark-600 
+                    flex flex-col justify-center items-center text-3xl text-teal font-bold
+                    [&>*]:duration-300 [&>*]:hover:cursor-pointer
+                    [&>*]:w-full [&>*]:text-center [&>*]:py-5
+                    [&>*]:xl:text-4xl"
+                >
+                    <Link to="Title" smooth={true} className="hover:text-light w-full hover:bg-dark-900" duration={700}>
+                        Home
+                    </Link>
+                    <Link to="Intro" smooth={true} className="hover:text-light hover:bg-dark-900" duration={700}>Intro</Link>
+                    <Link to="Skills" smooth={true} className="hover:text-light hover:bg-dark-900" duration={700}>Skills</Link>
+                    <Link to="Projects" smooth={true} className="hover:text-light hover:bg-dark-900" duration={700}>Projects</Link>
+                </div>
+            </div>
+        </>
     )
 }
 
