@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AnimationControls, motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 
 interface DropDownButtonProps {
@@ -7,7 +7,7 @@ interface DropDownButtonProps {
     setOpen: (b: boolean) => void;
 }
 
-const DropdownButton = ({ isOpen, setOpen }: DropDownButtonProps) => {
+const DropdownButton: React.FC<DropDownButtonProps> = ({ isOpen, setOpen }: DropDownButtonProps) => {
     const handleClick = () => {
         if (isOpen) {
             console.log("false")
@@ -32,12 +32,6 @@ interface MenuProps {
 }
 
 const DropDownMenu = ({ isOpen }: MenuProps) => {
-    const scrollToSection = (sectionId: string) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
     return (
         <div className="relative h-full w-full flex flex-col items-end">
             <AnimatePresence>
