@@ -20,13 +20,11 @@ const TextBoxReveal: React.FC<Props> = ({ className, initialScale, offsetX, offs
     }, [isInView]);
 
     return (
-        <motion.div ref={ref} className={className}
+        <motion.div className={className}
             variants={{
                 hidden: { opacity: 0.3, scale: initialScale, translateX: offsetX, translateY: offsetY },
                 visible: { opacity: 1, scale: 1, translateX: 0, translateY: 0 }
             }}
-            initial="hidden"
-            animate={mainControls}
             transition={{ type: "spring", damping: 20, stiffness: 50, mass: 1, restDelta: 0.001, delay: 0.5 }}
         >
         </motion.div>
