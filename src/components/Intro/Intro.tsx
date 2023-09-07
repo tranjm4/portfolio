@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Text from '../Supplemental/Text';
-import { AnimationControls, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import SlideAppear from '../Animations/SlideAppear';
 import TextBoxReveal from '../Animations/TextBoxReveal';
 import Reveal from '../Animations/Reveal';
