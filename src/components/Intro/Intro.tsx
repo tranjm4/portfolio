@@ -110,7 +110,7 @@ const Intro: React.FC = () => {
                     </Text>
                     <div className="hidden md:items-center md:flex">
                         <SlideAppear className="flex items-center z-20"
-                            offsetX="10vw" offsetY="-10vh" once={false} index={2}>
+                            offsetX="10vw" offsetY="-10vh" once={true} index={2}>
                             <Laptop />
                         </SlideAppear>
                     </div>
