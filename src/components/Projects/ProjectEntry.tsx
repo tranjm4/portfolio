@@ -2,6 +2,8 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import githubLogo from "../../assets/links/github.svg";
+import SlideAppear from "../Animations/SlideAppear";
+import Reveal from "../Animations/Reveal";
 
 interface EntryProps {
     gif: any;
@@ -66,14 +68,15 @@ const ProjectEntry: React.FC<Props> = ({ properties }: Props) => {
                             }}
                             src={properties.gif} />
                     </motion.div>
-
-                    <div className="text-light ml-10">
-                        <p>
-                            {properties.desc}
-                        </p>
-                        <p className="my-5 font-extrabold">
-                            {properties.skills}
-                        </p>
+                    <div className="text-light ml-0 md:ml-10 xl:ml-0">
+                        <Reveal className="">
+                            <p>
+                                {properties.desc}
+                            </p>
+                            <p className="my-5 font-extrabold">
+                                {properties.skills}
+                            </p>
+                        </Reveal>
                     </div>
                 </div>
             </div>

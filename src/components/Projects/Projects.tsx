@@ -59,10 +59,10 @@ const Projects: React.FC = () => {
                     {description}
                 </Text>
                 <div className="flex items-center justify-center">
-                    <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10" >
+                    <SlideAppear className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10" offsetX="0" offsetY="10vh" once={true}>
                         <ProjectEntry properties={portfolioEntry}></ProjectEntry>
                         <ProjectEntry properties={wrapifyEntry}></ProjectEntry>
-                    </div>
+                    </SlideAppear>
                 </div>
             </div>
         </>
