@@ -77,7 +77,7 @@ const Circles = ({ mainControls }: CircleProps) => {
   const transition = {
     type: "spring",
     damping: 40,
-    stiffness: 120,
+    stiffness: 100,
     restDelta: 0.001
   };
   return (
@@ -85,8 +85,8 @@ const Circles = ({ mainControls }: CircleProps) => {
       <motion.div className="fixed top-1/2 left-1/2"
         variants={{
           open: { opacity: 0, translateX: "-10vw", translateY: "20vh" },
-          title: { opacity: 1, translateX: "5vw", translateY: 0, scale: 1 },
-          intro: { opacity: 1, translateX: "-10vw", translateY: "-10vh", scale: 1.2 },
+          title: { opacity: 1, translateX: "5vw", translateY: "10vh", scale: 1 },
+          intro: { opacity: 1, translateX: "-10vw", translateY: "5vh", scale: 1.2 },
           skills: { opacity: 1, translateX: "15vw", translateY: 0, scale: 1.5 },
           projects: { opacity: 1, translateX: 0, translateY: "10vh", scale: 1.2 },
         }}
