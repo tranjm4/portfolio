@@ -23,11 +23,11 @@ const Text: React.FC<Props> = ({ children }: Props) => {
             initial="hidden"
             animate={mainControls}
         >
-            <TextBoxReveal className="absolute w-[100%] h-[100%] lg:w-full lg:h-full top-[0%] left-[-10%] rounded-md rounded-tr-[20%] rounded-bl-[20%]
+            <TextBoxReveal className="absolute w-[100%] h-[100%] lg:w-full lg:h-full top-[0%] left-[-10%] rounded-md rounded-tr-[2rem] rounded-bl-md
                         bg-gradient-to-br from-purple-800 to-transparent via-transparent via-70%" initialScale="0.5" offsetX="-20vw" offsetY="10vh" />
-            <TextBoxReveal className="absolute w-[80%] h-[80%] top-[30%] left-[0%] rounded-md rounded-tr-[10%] rounded-bl-[10%]
+            <TextBoxReveal className="absolute w-[80%] h-[80%] top-[30%] left-[0%] rounded-md rounded-tr-[2rem] rounded-bl-md
                         bg-gradient-to-br from-purple-800 to-transparent via-transparent via-70%" initialScale="0.5" offsetX="10vw" offsetY="-10vh" />
-            <TextBoxReveal className="absolute w-[80%] h-[80%] top-[10%] left-[30%] lg:left-[25%] rounded-md rounded-tr-[10%] rounded-bl-[10%]
+            <TextBoxReveal className="absolute w-[80%] h-[80%] top-[10%] left-[30%] lg:left-[25%] rounded-md rounded-tr-[2rem] rounded-bl-md
                         bg-gradient-to-br from-purple-800 to-transparent via-transparent via-70%" initialScale="2" offsetX="10vw" offsetY="-5vh" />
 
             <SlideAppear className="w-full md:w-full" offsetX="10vw" offsetY="10vh" once={true} index={0}>
