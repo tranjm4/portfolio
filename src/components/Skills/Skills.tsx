@@ -95,7 +95,7 @@ const SectionTab: React.FC<SectionTabProps> = ({ children, name, index, handleCl
             <button onClick={() => handleClick(index)}
                 className="w-full p-3 hover:bg-purple-400/70 duration-300"
             >
-                <h2 className="text-left font-bold text-teal text-3xl lg:text-5xl">{name}</h2>
+                <h2 className="text-left font-bold text-teal text-3xl lg:text-4xl">{name}</h2>
             </button>
             <hr className="border-teal border-2 lg:border-4"></hr>
             <div className="overflow-hidden h-fit w-fit">
@@ -181,7 +181,7 @@ const Skills: React.FC = () => {
 
     return (
         <>
-            <div className="min-h-fit h-[100vh] w-full mb-[10vh] p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
+            <div className="min-h-fit h-[100vh] w-full mb-[min(500px,20vh)] p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
                 <SlideAppear className="w-full z-20" offsetX="10vw" offsetY="-5vh" once={true} index={0}>
                     <h1 className="text-teal my-5 font-extrabold text-6xl md:text-7xl z-20 relative">
                         {title}
@@ -204,7 +204,7 @@ const Skills: React.FC = () => {
                                     <SkillEntry name="C++">
                                         <img src={cpp_logo} />
                                     </SkillEntry>
-                                    <SkillEntry name="TypeScript">‘
+                                    <SkillEntry name="TypeScript">
                                         <img src={typescript_logo} />
                                     </SkillEntry>
                                     <SkillEntry name="HTML">
