@@ -95,10 +95,10 @@ const Intro: React.FC = () => {
             <div className="relative flex flex-col px-10">
 
                 <SlideAppear className="relative h-fit w-fit self-end md:hidden z-20"
-                    offsetX="10vw" offsetY="-10vh" once={true}>
+                    offsetX="10vw" offsetY="-10vh" once={true} index={1}>
                     <Laptop />
                 </SlideAppear>
-                <SlideAppear className="" offsetX="-10vw" offsetY="5vh" once={true}>
+                <SlideAppear className="" offsetX="-10vw" offsetY="5vh" once={true} index={0}>
                     <h1 className="text-teal my-5 font-extrabold text-6xl md:text-7xl z-20 relative">
                         {title}
                     </h1>
@@ -110,7 +110,7 @@ const Intro: React.FC = () => {
                     </Text>
                     <div className="hidden md:items-center md:flex">
                         <SlideAppear className="flex items-center z-20"
-                            offsetX="10vw" offsetY="-10vh" once={false}>
+                            offsetX="10vw" offsetY="-10vh" once={false} index={2}>
                             <Laptop />
                         </SlideAppear>
                     </div>

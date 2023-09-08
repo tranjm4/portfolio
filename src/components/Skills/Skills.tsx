@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SlideAppear from '../Animations/SlideAppear';
 import Text from '../Supplemental/Text';
 import { AnimationControls, motion, useAnimation } from "framer-motion";

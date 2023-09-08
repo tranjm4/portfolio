@@ -6,7 +6,7 @@ import linkedinLogo from "../../assets/links/linkedin.svg";
 
 const TitleText: React.FC = () => {
     return (
-        <SlideAppear className="" offsetX="-20vw" offsetY="-10vh" once={false}>
+        <SlideAppear className="" offsetX="-20vw" offsetY="-10vh" once={false} index={0}>
 
             <Reveal className="">
                 <div className="bg-gradient-to-b from-teal to-purple-400 bg-clip-text text-transparent">
@@ -45,7 +45,7 @@ const TitleText: React.FC = () => {
 
 const Image: React.FC = () => {
     return (
-        <SlideAppear className="" offsetX="20vw" offsetY="5vh" once={false}>
+        <SlideAppear className="" offsetX="20vw" offsetY="5vh" once={false} index={0}>
             <motion.div
                 className="flex justify-center"
                 whileHover={{ scale: 1.1 }}
