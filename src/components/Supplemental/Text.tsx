@@ -30,7 +30,7 @@ const Text: React.FC<Props> = ({ children }: Props) => {
             <TextBoxReveal className="absolute w-[80%] h-[80%] top-[10%] left-[30%] lg:left-[25%] rounded-md rounded-tr-[10%] rounded-bl-[10%]
                         bg-gradient-to-br from-purple-800 to-transparent via-transparent via-70%" initialScale="2" offsetX="10vw" offsetY="-5vh" />
 
-            <SlideAppear className="w-full md:w-full" offsetX="10vw" offsetY="10vh" once={true}>
+            <SlideAppear className="w-full md:w-full" offsetX="10vw" offsetY="10vh" once={true} index={0}>
                 <Reveal className="">
                     <h2 className="text-lg text-light z-20 font-thin
                             lg:text-2xl xl:text-3xl">

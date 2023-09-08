@@ -7,15 +7,16 @@ interface Props {
     offsetX: string;
     offsetY: string;
     once: boolean;
+    index: number;
 }
 
-const SlideAppear: React.FC<Props> = ({ children, className, offsetX, offsetY, once }: Props) => {
+const SlideAppear: React.FC<Props> = ({ children, className, offsetX, offsetY, once, index }: Props) => {
     const transition = {
         type: "spring",
         damping: 100,
         stiffness: 300,
         restDelta: 0.01,
-        delay: 0.25
+        delay: 0.25 + index * 0.2
     };
     const initial = {
         opacity: 0.05,

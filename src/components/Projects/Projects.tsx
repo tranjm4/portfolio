@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
     return (
         <>
             <div className="h-fit w-full mb-[10vh] p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
-                <SlideAppear className="w-full z-20" offsetX="10vw" offsetY="-5vh" once={true}>
+                <SlideAppear className="w-full z-20" offsetX="10vw" offsetY="-5vh" once={true} index={0}>
                     <h1 className="text-teal my-5 font-extrabold text-6xl md:text-7xl z-20 relative">
                         {title}
                     </h1>
@@ -59,10 +59,15 @@ const Projects: React.FC = () => {
                     {description}
                 </Text>
                 <div className="flex items-center justify-center">
-                    <SlideAppear className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10" offsetX="0" offsetY="10vh" once={true}>
-                        <ProjectEntry properties={portfolioEntry}></ProjectEntry>
-                        <ProjectEntry properties={wrapifyEntry}></ProjectEntry>
-                    </SlideAppear>
+                    <div className="grid grid-cols-1 xl:grid-cols-2 xl:gap-10">
+
+                        <SlideAppear className="" offsetX="0" offsetY="10vh" once={true} index={0}>
+                            <ProjectEntry properties={portfolioEntry}></ProjectEntry>
+                        </SlideAppear>
+                        <SlideAppear className="" offsetX="0" offsetY="10vh" once={true} index={1}>
+                            <ProjectEntry properties={wrapifyEntry}></ProjectEntry>
+                        </SlideAppear>
+                    </div>
                 </div>
             </div>
         </>
