@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Reveal from "../Animations/Reveal";
 import githubLogo from "../../assets/links/github.svg";
 import linkedinLogo from "../../assets/links/linkedin.svg";
+import portrait from "../../assets/portrait2.jpg";
 
 const TitleText: React.FC = () => {
     return (
@@ -45,16 +46,16 @@ const TitleText: React.FC = () => {
 
 const Image: React.FC = () => {
     return (
-        <SlideAppear className="" offsetX="20vw" offsetY="5vh" once={false} index={0}>
+        <SlideAppear className="" offsetX="10vw" offsetY="5vh" once={false} index={0}>
             <motion.div
                 className="flex justify-center"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", damping: 20, stiffness: 200, mass: 2 }}>
-                <div className="relative flex overflow-hidden rounded-3xl aspect-square max-w-[200px] w-[60vw] shadow-3xl
-                                    md:w-[50%] md:max-w-[500px] lg:w-[100%] lg:max-w-[400px]">
+                <div className="relative flex overflow-hidden rounded-3xl aspect-square max-w-[200px] max-h-[200px] h-[60vw] w-[60vw] shadow-3xl
+                                    md:w-[50%] md:max-w-[500px] md:max-h-[500px] md:h-[50%] lg:w-[100%] lg:max-w-[400px]">
                     {/* Image */}
-                    <img src="/portrait2.jpg" alt="Portrait of me at Figueroa Terrace and Centennial Street in L.A."
+                    <img src={portrait} alt="Portrait of me at Figueroa Terrace and Centennial Street in L.A."
                         className="h-full w-full object-cover"
                     />
                 </div>
