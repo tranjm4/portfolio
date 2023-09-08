@@ -19,7 +19,7 @@ const DropdownButton: React.FC<DropDownButtonProps> = ({ isOpen, setOpen }: Drop
         }
     }
     return (
-        <button className="fixed group z-10 h-14 aspect-square border-4 border-teal hover:border-light duration-700 rounded-lg mt-4 ml-4" onClick={handleClick}>
+        <button className="fixed group z-10 h-14 lg:h-20 aspect-square border-4 border-teal hover:border-light duration-700 rounded-lg mt-4 ml-4 lg:mt-8 lg:ml-8" onClick={handleClick}>
             <div className="absolute top-[25%] left-[10%] bg-teal group-hover:bg-light duration-300 w-[80%] h-[10%] rounded-full" />
             <div className="absolute top-[45%] left-[10%] bg-teal group-hover:bg-light duration-300 w-[80%] h-[10%] rounded-full" />
             <div className="absolute top-[65%] left-[10%] bg-teal group-hover:bg-light duration-300 w-[80%] h-[10%] rounded-full" />
@@ -37,10 +37,10 @@ const DropDownMenu = ({ isOpen }: MenuProps) => {
             <AnimatePresence>
                 {isOpen && (
                     <>
-                        <motion.div className="absolute top-10 left-10 h-fit py-10 bg-dark-600 -z-10 origin-top-left shadow-even"
-                            initial={{ scale: 0, borderRadius: "100%", width: "25%", top: "2.5rem", left: "2.5rem" }}
-                            animate={{ scale: 1, borderRadius: 0, width: "100%", top: 0, left: 0 }}
-                            exit={{ scale: 0, borderRadius: "100%", width: "25%", top: "2.5rem", left: "2.5rem" }}
+                        <motion.div className="absolute top-10 left-10 h-fit w-full py-10 bg-dark-600 -z-10 origin-top-left shadow-even"
+                            initial={{ scale: 0, opacity: 0, borderRadius: "100%", width: "25%", top: "2.5rem", left: "2.5rem" }}
+                            animate={{ scale: 1, opacity: 1, borderRadius: 0, width: "100%", top: 0, left: 0 }}
+                            exit={{ scale: 0, opacity: 0, borderRadius: "100%", width: "25%", top: "2.5rem", left: "2.5rem" }}
                             transition={{ type: "spring", damping: 25, stiffness: 150, restDelta: 0.0001 }}
                         >
                             <motion.div className="flex flex-col justify-evenly h-[20vh] items-center text-teal font-bold text-2xl"
