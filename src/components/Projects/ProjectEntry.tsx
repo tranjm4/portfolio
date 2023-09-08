@@ -52,20 +52,23 @@ const ProjectEntry: React.FC<Props> = ({ properties }: Props) => {
                             ease: "easeInOut"
                         }}
                     >
-                        <motion.img className="max-w-[200px] rounded-md border-light border-8 border-l-4 border-t-4"
-                            initial={{
-                                transform: "translateY(-10px) translateX(-15px)"
-                            }}
-                            animate={{
-                                transform: "translateY(-5px) translateX(-5px)"
-                            }}
-                            transition={{
-                                repeat: Infinity,
-                                repeatType: "mirror",
-                                duration: 2.5,
-                                ease: "easeInOut"
-                            }}
-                            src={properties.gif} />
+                        <motion.div className="" whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+
+                            <motion.img className="max-w-[200px] rounded-md border-light border-8 border-l-4 border-t-4"
+                                initial={{
+                                    transform: "translateY(-10px) translateX(-15px)"
+                                }}
+                                animate={{
+                                    transform: "translateY(-5px) translateX(-5px)"
+                                }}
+                                transition={{
+                                    repeat: Infinity,
+                                    repeatType: "mirror",
+                                    duration: 2.5,
+                                    ease: "easeInOut"
+                                }}
+                                src={properties.gif} />
+                        </motion.div>
                     </motion.div>
                     <div className="text-light ml-0 md:ml-10 xl:ml-0">
                         <Reveal className="">
