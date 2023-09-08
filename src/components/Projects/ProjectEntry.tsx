@@ -72,7 +72,7 @@ const ProjectEntry: React.FC<Props> = ({ properties }: Props) => {
                             <p>
                                 {properties.desc}
                             </p>
-                            <p className="my-5 font-extrabold">
+                            <p className="my-5 font-extrabold text-teal">
                                 {properties.skills}
                             </p>
                         </Reveal>
