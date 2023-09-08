@@ -12,19 +12,19 @@ const TitleText: React.FC = () => {
                 <div className="bg-gradient-to-b from-teal to-purple-400 bg-clip-text text-transparent">
 
                     <h1 className="text-5xl font-extrabold mb-2
-                   md:text-7xl md:mb-6 xl:text-9xl">
+                   md:text-7xl md:mb-6">
 
                         I'm <br /> Jonathan Tran
                     </h1>
 
                     <h2 className="text-3xl font-extrabold mb-2
                    md:text-5xl md:mb-4
-                   lg:text-6xl lg:mb-6 xl:text-7xl">
+                   lg:text-6xl lg:mb-6">
                         Software Engineer
                     </h2>
                     <h3 className="text-xl font-bold mb-2
                    md:text-3xl md:mb-4
-                   lg:text-4xl lg:mb-6 xl:text-5xl">
+                   lg:text-4xl lg:mb-6">
                         University of California, Irvine <br />
                         <span className=" text-sm md:text-lg lg:text-2xl">
                             (Sept 2021 - Dec 2024)
@@ -32,7 +32,7 @@ const TitleText: React.FC = () => {
                     </h3>
                     <h3 className="text-xl font-bold
                    md:text-3xl
-                   lg:text-4xl xl:text-5xl">
+                   lg:text-4xl">
                         Computer Science, B.S. <br />
                         Statistics, Minor
                     </h3>
