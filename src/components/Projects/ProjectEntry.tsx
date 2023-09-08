@@ -13,99 +13,71 @@ interface EntryProps {
 
 interface Props {
     properties: EntryProps;
-    direction: number;
-    page: number;
-    paginate: (x: number) => void;
 }
-const ProjectEntry: React.FC<Props> = ({ properties, direction, page, paginate }: Props) => {
-    const swipeConfidenceThreshold = 10000;
-    const swipePower = (offset: number, velocity: number) => {
-        return Math.abs(offset) * velocity;
-    };
-
-    const variants = {
-        enter: (direction: number) => {
-            return {
-                x: direction > 0 ? 1000 : -1000,
-                opacity: 0,
-                scale: 1
-            };
-        },
-        center: {
-            zIndex: 1,
-            x: 0,
-            opacity: 1,
-            scale: 1
-        },
-        exit: (direction: number) => {
-            return {
-                zIndex: 0,
-                x: direction < 0 ? 1000 : -1000,
-                opacity: 0,
-                scale: 1
-            };
-        }
-    };
-
+const ProjectEntry: React.FC<Props> = ({ properties }: Props) => {
     return (
-
-        <AnimatePresence initial={false} custom={direction}>
-
-            <motion.div className="absolute flex flex-col justify-evenly items-center md:flex-row h-full w-full"
-                custom={direction}
-                key={page}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                    x: { type: "spring", damping: 30, stiffness: 300, restDelta: 0.001 },
-                    opacity: { duration: 0.2 }
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                    e;
-                    const swipe = swipePower(offset.x, velocity.x);
-
-                    if (swipe < -swipeConfidenceThreshold) {
-                        paginate(1);
-                    } else if (swipe > swipeConfidenceThreshold) {
-                        paginate(-1);
-                    }
-                }}
-            >
-
-                <div className="w-fit max-w-[300px] max-h-[300px] md:max-w-[500px] md:max-h-[500px] flex-grow-0 h-fit shadow-even md:shadow-3xl md:mr-10">
-                    <img src={properties.gif} className="" />
-                </div>
-                <div className="w-full md:w-full">
-                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold my-3 text-center md:text-left">
+        <>
+            <div className="my-10 max-w-[500px] xl:max-w-[">
+                <div className="flex w-full justify-between items-center my-2">
+                    <h2 className="text-teal font-extrabold text-2xl md:text-3xl">
                         {properties.title}
-                    </h1>
-                    <p className="font-thin text-left md:text-xl 2xl:text-2xl">
-                        {properties.desc}
-                        <br /> <br />
-                        <span className="font-bold">
+                    </h2>
+                    <a className="px-5 py-2 bg-gradient-to-r from-purple-800 to-transparent rounded-tl-2xl rounded-br-2xl rounded-bl-md
+                        hover:rounded-md hover:bg-purple-400 duration-300
+                        text-light font-bold hover:text-teal"
+                        href={properties.repo} target="_blank">
+                        <img className="inline-block w-[50px]"
+                            src={githubLogo} />
+                        <p className="inline-block">
+                            Github Repo
+                        </p>
+                    </a>
+                </div>
+                <div className="flex flex-col md:flex-row xl:flex-col justify-center items-center py-10 px-5 md:px-10 bg-gradient-to-b from-purple-800 rounded-tl-xl rounded-tr-[20%] rounded-bl-[20%] hover:rounded-xl duration-500">
+                    <motion.div className="w-fit h-fit pb-2 pr-2 rounded-md mb-5"
+                        style={{
+                            transform: "rotateY(-15deg) rotateX(10deg)"
+                        }}
+                        initial={{
+                            backgroundColor: "#6366f1"
+                        }}
+                        animate={{
+                            backgroundColor: "#2dd4bf"
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            repeatType: "mirror",
+                            duration: 2.5,
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <motion.img className="max-w-[200px] rounded-md border-light border-8 border-l-4 border-t-4"
+                            initial={{
+                                transform: "translateY(-10px) translateX(-15px)"
+                            }}
+                            animate={{
+                                transform: "translateY(-5px) translateX(-5px)"
+                            }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "mirror",
+                                duration: 2.5,
+                                ease: "easeInOut"
+                            }}
+                            src={properties.gif} />
+                    </motion.div>
+
+                    <div className="text-light ml-10">
+                        <p>
+                            {properties.desc}
+                        </p>
+                        <p className="my-5 font-extrabold">
                             {properties.skills}
-                        </span>
-                    </p>
-
-                    <div className="flex justify-center md:justify-normal">
-
-                        <a target="_blank" href={properties.repo}
-                            className="bg-dark-700 min-h-min w-fit flex justify-center items-center my-3 px-3 py-2 hover:shadow-even duration-300">
-                            <img src={githubLogo}
-                                className=" w-10 mr-2" />
-                            <p className="font-medium text-center md:text-xl md:font-bold">
-                                Github Repo
-                            </p>
-                        </a>
+                        </p>
                     </div>
                 </div>
-            </motion.div>
-        </AnimatePresence>
+            </div>
+        </>
     )
 }
 
