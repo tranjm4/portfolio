@@ -46,25 +46,35 @@ function App() {
       <div className="flex flex-col w-screen relative z-20 overflow-hidden
         lg:flex-row">
         <Nav />
-        <div className="">
-          <section ref={titleRef} id="Title">
+        <div className="pt-10 md:mt-0">
+          <section ref={titleRef} id="Title" className="block">
             <Title />
           </section>
 
-          <section ref={introRef} id="Intro">
+          <section ref={introRef} id="Intro" className="block">
             <Intro />
           </section>
 
-          <section ref={skillsRef} id="Skills">
+          <section ref={skillsRef} id="Skills" className="block">
             <Skills />
           </section>
 
-          <section ref={projectsRef} id="Projects">
+          <section ref={projectsRef} id="Projects" className="block">
             <Projects />
           </section>
         </div>
 
       </div>
+
+      {/* <div className="h-screen w-screen flex flex-col">
+        <div className="block h-fit w-screen bg-light">
+          <div className="block h-[10vh] w-full bg-teal hover:h-[20vh] duration-500"></div>
+          <div className="block h-[10vh] w-full bg-purple-400"></div>
+        </div>
+        <div className="block w-full flex-grow">
+          <div className="block h-full w-full bg-gold"></div>
+        </div>
+      </div> */}
     </>
   )
 }
