@@ -25,19 +25,19 @@ interface EntryProps {
 const SkillEntry: React.FC<EntryProps> = ({ children, name }: EntryProps) => {
     return (
         <motion.div className="aspect-square bg-gradient-to-br from-purple-800 to-transparent via-transparent via-50% 
-            p-5 flex justify-center items-center rounded-xl"
+            p-5 flex justify-center items-center rounded-xl h-[100px] w-[100px] md:h-[125px] md:w-[125px] lg:h-[150px] lg:w-[150px]"
             variants={{
                 hover: {
                     backgroundColor: "#6366f1",
                     scale: 1.1,
-                    borderRadius: "30px",
+                    borderRadius: "30%",
                 },
                 initial: {
                 }
 
             }}
             transition={{
-                duration: 0.3,
+                duration: 0.3,  
                 ease: "easeOut",
             }}
             whileHover="hover"
@@ -93,12 +93,12 @@ const SectionTab: React.FC<SectionTabProps> = ({ children, name, index, handleCl
     return (
         <div className="w-full block">
             <button onClick={() => handleClick(index)}
-                className="w-full p-3 hover:bg-purple-400/70 duration-300"
+                className="w-full p-3 bg-purple-400/30 rounded-md rounded-bl-2xl rounded-tr-2xl hover:bg-purple-400/70 duration-300"
             >
                 <h2 className="text-left font-bold text-teal text-3xl lg:text-4xl">{name}</h2>
             </button>
-            <hr className="border-teal border-2 lg:border-4"></hr>
-            <div className="overflow-hidden h-fit w-fit">
+            {/* <hr className="border-teal border-2 lg:border-4"></hr> */}
+            <div className="overflow-hidden h-fit w-full">
 
                 <motion.div
                     onClick={() => handleClick(index)}
@@ -111,7 +111,7 @@ const SectionTab: React.FC<SectionTabProps> = ({ children, name, index, handleCl
                             translateY: "-100%"
                         },
                         open: {
-                            height: "450px",
+                            height: "fit-content",
                             scaleY: 1,
                             opacity: 1,
                             translateY: 0
@@ -181,7 +181,7 @@ const Skills: React.FC = () => {
 
     return (
         <>
-            <div className="min-h-fit h-[100vh] w-full mb-[min(500px,20vh)] p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
+            <div className="h-fit w-full p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
                 <SlideAppear className="w-full z-20" offsetX="10vw" offsetY="-5vh" once={true} index={0}>
                     <h1 className="text-teal my-5 font-extrabold text-6xl md:text-7xl z-20 relative">
                         {title}
@@ -196,7 +196,7 @@ const Skills: React.FC = () => {
                         <SlideAppear className="" offsetX="0" offsetY="10vh" once={true} index={0}>
 
                             <SectionTab name={"Languages"} index={0} handleClick={handleTabClick} animateControls={languageControls}>
-                                <div className="grid h-full grid-cols-2 md:grid-cols-3 gap-5 gap-x-10 my-5 py-3 px-10 [&>*]:aspect-square [&>*]:w-[100px] [&>*]:md:w-[160px]">
+                                <div className="grid h-full grid-cols-2 md:grid-cols-3 gap-5 gap-x-10 my-5 py-3 px-10 [&>*]:aspect-square">
 
                                     <SkillEntry name={"Python"}>
                                         <img src={python_logo} />

@@ -13,7 +13,7 @@ const TitleText: React.FC = () => {
                 <div className="bg-gradient-to-b from-teal to-purple-400 bg-clip-text text-transparent">
 
                     <h1 className="text-5xl font-extrabold mb-2
-                   md:text-7xl md:mb-6">
+                   xl:text-7xl md:mb-6">
 
                         I'm <br /> Jonathan Tran
                     </h1>
@@ -24,16 +24,14 @@ const TitleText: React.FC = () => {
                         Software Engineer
                     </h2>
                     <h3 className="text-xl font-bold mb-2
-                   md:text-3xl md:mb-4
-                   lg:text-4xl lg:mb-6">
+                   lg:text-3xl md:mb-4 lg:mb-6">
                         University of California, Irvine <br />
                         <span className=" text-sm md:text-lg lg:text-2xl">
                             (Sept 2021 - Dec 2024)
                         </span>
                     </h3>
                     <h3 className="text-xl font-bold
-                   md:text-3xl
-                   lg:text-4xl">
+                   lg:text-3xl" >
                         Computer Science, B.S. <br />
                         Statistics, Minor
                     </h3>
@@ -84,7 +82,7 @@ const MediaLinks: React.FC = () => {
 
 const Title = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-[100vh] w-full py-24 px-5 lg:px-10 [&>*]:my-5
+        <div className="flex flex-col items-center justify-center h-fit min-h-screen w-full py-24 px-5 lg:px-10 [&>*]:my-5
             lg:flex-row mb-[20vh]">
             <TitleText />
             <div className="flex flex-col items-center justify-center [&>*]:my-5 lg:ml-10">
