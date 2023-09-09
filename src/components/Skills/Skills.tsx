@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { useAnimation } from "framer-motion";
+
 import SlideAppear from '../Animations/SlideAppear';
 import Text from '../Supplemental/Text';
-import { AnimationControls, motion, useAnimation } from "framer-motion";
+import SectionTab from "./SectionTab";
+import SkillEntry from "./SkillEntry";
 
 import cpp_logo from "../../assets/logos/cpp_logo.svg";
 import react_logo from "../../assets/logos/react_logo.svg";
@@ -15,121 +18,6 @@ import express_logo from "../../assets/logos/express_logo.svg";
 import nodejs_logo from "../../assets/logos/nodejs_logo.svg";
 import pytorch_logo from "../../assets/logos/pytorch_logo.svg"
 import git_logo from "../../assets/logos/git_logo.svg"
-
-
-interface EntryProps {
-    children: React.ReactNode;
-    name: string;
-}
-
-const SkillEntry: React.FC<EntryProps> = ({ children, name }: EntryProps) => {
-    return (
-        <motion.div className="aspect-square bg-gradient-to-br from-purple-800 to-transparent via-transparent via-50% 
-            p-5 flex justify-center items-center rounded-xl h-[100px] w-[100px] md:h-[125px] md:w-[125px] lg:h-[150px] lg:w-[150px]"
-            variants={{
-                hover: {
-                    backgroundColor: "#6366f1",
-                    scale: 1.1,
-                    borderRadius: "30%",
-                },
-                initial: {
-                }
-
-            }}
-            transition={{
-                duration: 0.3,  
-                ease: "easeOut",
-            }}
-            whileHover="hover"
-            initial="initial"
-        >
-            <motion.div className="relative z-10 flex flex-col justify-evenly items-center"
-                variants={{
-                    hover: {
-                        translateY: "-10%",
-                        scale: 1.1
-                    }
-                }}
-                transition={{
-                    duration: 0.7,
-                    ease: "easeInOut",
-                    delay: 0.1
-                }}
-            >
-                {children}
-                <motion.p className="font-thin text-light"
-                    variants={{
-                        hover: {
-                            opacity: 1,
-                            transform: "translateY(0)",
-                        },
-                        initial: {
-                            opacity: 0,
-                            transform: "translateY(100%)",
-                        }
-                    }}
-                    transition={{
-                        duration: 0.3,
-                        delay: 0.2,
-                        ease: "easeOut",
-                    }}
-                >
-                    {name}
-                </motion.p>
-            </motion.div>
-        </motion.div>
-    )
-}
-
-interface SectionTabProps {
-    children: React.ReactNode;
-    name: string;
-    index: number;
-    handleClick: (n: number) => void;
-    animateControls: AnimationControls;
-}
-
-const SectionTab: React.FC<SectionTabProps> = ({ children, name, index, handleClick, animateControls }: SectionTabProps) => {
-    return (
-        <div className="w-full block">
-            <button onClick={() => handleClick(index)}
-                className="w-full p-3 bg-purple-400/30 rounded-md rounded-bl-2xl rounded-tr-2xl hover:bg-purple-400/70 duration-300"
-            >
-                <h2 className="text-left font-bold text-teal text-3xl lg:text-4xl">{name}</h2>
-            </button>
-            {/* <hr className="border-teal border-2 lg:border-4"></hr> */}
-            <div className="overflow-hidden h-fit w-full">
-
-                <motion.div
-                    onClick={() => handleClick(index)}
-                    className="origin-top hover:cursor-pointer"
-                    variants={{
-                        closed: {
-                            height: 0,
-                            scaleY: 0,
-                            opacity: 0,
-                            translateY: "-100%"
-                        },
-                        open: {
-                            height: "fit-content",
-                            scaleY: 1,
-                            opacity: 1,
-                            translateY: 0
-                        }
-                    }}
-                    transition={{
-                        duration: 0.4,
-                        ease: "easeInOut",
-                    }}
-                    initial="closed"
-                    animate={animateControls}
-                >
-                    {children}
-                </motion.div>
-            </div>
-        </div>
-    )
-}
 
 const Skills: React.FC = () => {
     const description = (
@@ -181,7 +69,7 @@ const Skills: React.FC = () => {
 
     return (
         <>
-            <div className="h-fit w-full p-10 lg:p-24 xl:px-[10%] 2xl:px-[20%]">
+            <div className="h-fit w-full p-10 mb-[20vh] lg:p-24 xl:px-[10%] 2xl:px-[20%]">
                 <SlideAppear className="w-full z-20" offsetX="10vw" offsetY="-5vh" once={true} index={0}>
                     <h1 className="text-teal my-5 font-extrabold text-6xl md:text-7xl z-20 relative">
                         {title}
