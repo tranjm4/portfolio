@@ -1,9 +1,13 @@
-import SlideAppear from "../Animations/SlideAppear";
+import React from "react";
 import { motion } from "framer-motion";
+
 import Reveal from "../Animations/Reveal";
+import SlideAppear from "../Animations/SlideAppear";
+
 import githubLogo from "../../assets/links/github.svg";
 import linkedinLogo from "../../assets/links/linkedin.svg";
 import portrait from "../../assets/portrait2.jpg";
+
 
 const TitleText: React.FC = () => {
     return (
