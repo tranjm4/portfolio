@@ -46,7 +46,7 @@ function App() {
       <div className="flex flex-col w-screen relative z-20 overflow-hidden
         lg:flex-row">
         <Nav />
-        <div className="pt-10 md:mt-0">
+        <div className="pt-10 md:pt-0">
           <section ref={titleRef} id="Title" className="block">
             <Title />
           </section>
